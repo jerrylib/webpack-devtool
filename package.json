@@ -5,7 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd cheap-module-source-map && webpack"
+    "buildcmsm": "cd cheap-module-source-map && webpack",
+    "buildcsm": "cd cheap-source-map && webpack",
+    "builde": "cd eval && webpack",
+    "buildesm": "cd eval-source-map && webpack",
+    "buildhsm": "cd hidden-source-map && webpack",
+    "buildism": "cd inline-source-map && webpack",
+    "buildsm": "cd source-map && webpack",
+    "build": "npm run buildcsm && npm run buildsm && npm run buildism && npm run buildhsm && npm run buildcmsm && npm run buildcmsm && npm run builde && npm run buildesm"
   },
   "author": "",
   "license": "ISC",
