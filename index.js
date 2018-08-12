@@ -1,6 +1,6 @@
-const name = 'Pony'
-const age = 14
+import name from './module1'
+import age from './module2'
 
-export default {
+export {
   name, age
 }
