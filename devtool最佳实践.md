@@ -75,11 +75,9 @@ inline-source-map|生成一个 DataUrl 形式的 SourceMap 文件.
 
 ## 功能实现
 
-<!-- 
-1.阐述该功能，在webpack中是如何实现的 
--->
+//TODO 阐述webpack上对于devtool是如何实现的
 
-## 经验所得
+## 项目经验
 
 <!-- 
 分享一下为数不多的项目经验
@@ -87,24 +85,27 @@ inline-source-map|生成一个 DataUrl 形式的 SourceMap 文件.
  -->
 > 组内有一使用webpack1.* + angular1.*的项目，属于早期组内自行摸索的前端脚手架。
 > - 优化前
->   - 本地开发 10s
->   - 线上打包 30s
+>   - 线上打包
+>     - eval(15s左右) ![eval](./images/优化4.png)
+>     - eval-source-map(26s左右) ![eval-source-map](./images/优化2.png)
+>     - source-map(32s左右) ![source-map](./images/优化3.png)
 > - 优化后
->   - 本地开发 10s
->   - 线上打包 30s
+>   - 线上打包 
+>     - cheap-source-map(32s左右) ![cheap-source-map](./images/优化1.png)
 
 ## 版本差异
 
 //TODO devtool在webpack的各个版本中的差异点梳理
 
 ## 总结
+> 正确的打包方式，带来的将是代码包结构上开发调试效率的提升
 
 
 ## 参考文档
 
 [《webpack官方技术文档》](https://webpack.js.org/configuration/devtool/)
 
-[《 devtool里的7种SourceMap模式》](https://juejin.im/post/58293502a0bb9f005767ba2f)
+[《devtool里的7种SourceMap模式》](https://juejin.im/post/58293502a0bb9f005767ba2f)
 
 [《打破砂锅问到底：详解Webpack中的sourcemap》](https://segmentfault.com/a/1190000008315937)
 
